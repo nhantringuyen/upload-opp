@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PHP Show Data</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="container my-content">
+        <h1 class="page-header">PHP OOP - Upload File</h1>
+        <div class="row">
+            <!-- FORM UPLOAD -->
+            <form action="process.php" method="post" id="main-form" name="main-form" class="form-inline" enctype="multipart/form-data">
+                <input type="file" id="file-upload" name="file-upload" style="display: none;">
+                <a class="btn btn-info" id="select-file" href="#" onclick="javascript:openFile()">Select File</a>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </div>
+        <!-- ERROR -->
+        <ul class="alert alert-danger list-group">
+            <li>PHP Show Data</li>
+            <li>PHP Show Data</li>
+            <li>PHP Show Data</li>
+        </ul>
+        <div class="content-course">
+            <!-- IMAGE INFO -->
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <img src="data/image-150.jpg" />
+                        <div class="caption">
+                            <a href="#" class="badge badge-success" data-toggle="modal" data-target="#myModal">View</a>
+                            <a href="#" class="badge badge-success" role="button">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <img src="data/image-150.jpg" />
+                        <div class="caption">
+                            <a href="#" class="badge badge-success" data-toggle="modal" data-target="#myModal">View</a>
+                            <a href="#" class="badge badge-success" role="button">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <img src="data/image-150.jpg" />
+                        <div class="caption">
+                            <a href="#" class="badge badge-success" data-toggle="modal" data-target="#myModal">View</a>
+                            <a href="#" class="badge badge-success" role="button">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <img src="data/image-150.jpg" />
+                        <div class="caption">
+                            <a href="#" class="badge badge-success" data-toggle="modal" data-target="#myModal">View</a>
+                            <a href="#" class="badge badge-success" role="button">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <img src="data/image-150.jpg" />
+                        <div class="caption">
+                            <a href="#" class="badge badge-success" data-toggle="modal" data-target="#myModal">View</a>
+                            <a href="#" class="badge badge-success" role="button">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- POPUP -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-badgeledby="myModalbadge" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <img src="data/image-500.jpg" />
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function openFile() {
+            jQuery("#file-upload").click();
+            return false;
+        }
+        jQuery(document).ready(function($) {
+            $("#file-upload").on("change", function() {
+                let filename = this.value.split('\\').pop();
+                $("#select-file").text(filename);
+            });
+        });
+    </script>
+</body>
+
+</html>
